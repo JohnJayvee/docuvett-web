@@ -1,0 +1,23 @@
+Laravel = {!! json_encode(array_merge([
+    'csrfToken' => csrf_token(),
+    'appName' => config('app.name'),
+    'appUrl' => config('app.url'),
+    'appEnable' => config('app.enable'),
+    'appDebug' => config('app.debug'),
+    'appBadge' => config('app.badge_stage'),
+    'appTimezone' => config('app.timezone'),
+    'appSettings' => setting(null)->getAllSettings(false),
+    'pusher' => [
+        'key' => config('broadcasting.connections.pusher.key'),
+        'port' => config('broadcasting.connections.pusher.options.port'),
+        'scheme' => config('broadcasting.connections.pusher.options.scheme'),
+        'encrypted' => config('broadcasting.connections.pusher.options.encrypted'),
+    ],
+    'settings_fields' => (object)config('settings_fields', []),
+    'stripe_publish_key' => config('stripe.publish_key'),
+    'modules' => config('modular.modules'),
+    'formatDate' => config('date'),
+    'dashboards' => config('dashboard.list'),
+],
+config('global_with_js'),
+)) !!};

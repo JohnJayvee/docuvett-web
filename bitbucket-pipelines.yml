@@ -1,0 +1,24 @@
+pipelines:
+  pull-requests:
+    '**':
+      - step:
+          name: Eslint for pull-request
+          image: node:12.14
+          condition:
+            changesets:
+              includePaths:
+                - resources/assets/js/**
+          script:
+            - printenv
+            - CAN_RUN_PIPELINE=$(test -f code_review/eslint/index.js && echo true || echo false)
+            - if [ "$CAN_RUN_PIPELINE" != true ]; then exit; fi
+            - git checkout origin/$BITBUCKET_PR_DESTINATION_BRANCH
+            - git merge origin/$BITBUCKET_BRANCH --no-edit
+            - git reset $BITBUCKET_PR_DESTINATION_COMMIT
+            - git add .
+            - git status
+            - npm i -g eslint
+            - npm install --only=dev
+            - npm install axios dotenv --save-dev
+            - eslint --format json -c code_review/eslint/rules.js -o ./code_review/eslint/output/output.json --ext .js,.jsx,.vue ./resources || true
+            - node ./code_review/eslint/index.js $REVIEW_AUTH_STRING

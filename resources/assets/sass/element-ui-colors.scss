@@ -1,0 +1,112 @@
+/* Colors
+-------------------------- */
+
+$--color-white: #fff;
+$--color-black: #000;
+
+$--color-primary: #6a2875 !default;
+$--color-primary-dark: darken($--color-primary, 10%) !default;
+$--color-secondary: #4d4d4d !default;
+
+// for left sidebar menu
+
+$--color-hover-bg: lighten($--color-primary, 5%);
+$--color-item-bg: darken($--color-primary-dark, 10%);
+
+$--color-text-primary: darken($--color-primary, 5%) !default;
+$--color-text-regular: darken($--color-primary-dark, 20%) !default;
+$--color-text-secondary: #878d99 !default;
+$--color-text-placeholder: #b4bccc !default;
+
+$--background-color-body: $--color-white !default;
+
+/* Border
+-------------------------- */
+$--border-color-base: #d8dce5 !default;
+$--border-color-light: #dfe4ed !default;
+$--border-color-lighter: #e6ebf5 !default;
+$--border-color-extra-light: #edf2fc !default;
+$--border-color-button-default-hover: #b3d6e5;
+$--border-color-button-default-active: $--color-item-bg;
+$--border-color-button-success-hover: #85ce61;
+$--border-color-button-success-active: #5daf34;
+
+/* Button background color
+-------------------------- */
+$--background-color-button-default-hover: $--color-hover-bg;
+$--background-color-button-success-hover: #85ce61;
+$--background-color-button-success-active: #5daf34;
+$--background-color-button-danger-hover: #f78989;
+$--background-color-button-danger-active: #dd6161;
+
+/* Button font color
+-------------------------- */
+$--button-font-color-default-hover: $--color-text-primary;
+$--button-font-color-default-active: $--color-text-regular;
+
+/* Box-shadow
+-------------------------- */
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12);
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+/* Font
+-------------------------- */
+$--font-color-disabled-base: #bbb;
+
+/* Icon
+-------------------------- */
+$--icon-color: #666;
+$--icon-color-base: $--color-text-primary;
+
+/* Checkbox
+-------------------------- */
+$--checkbox-disabled-input-fill: #edf2fc;
+
+/* Select
+-------------------------- */
+$--select-multiple-input-color: #666;
+$--select-dropdown-empty-color: #999;
+
+/* Message
+-------------------------- */
+$--message-background-color: #edf2fc;
+$--message_unread-background-color: #fafafa;
+
+/* Cascader
+-------------------------- */
+$--cascader-menu-option-color-disabled: #999;
+$--cascader-menu-option-empty-color: #666;
+$--cascader-menu-group-color: #999;
+$--cascader-menu-option-pinyin-color: #999;
+
+/* Tab
+-------------------------- */
+$--tab-border-line: 1px solid #e4e4e4;
+
+/* Dialog
+-------------------------- */
+$--dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+/* Table
+-------------------------- */
+$--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12);
+
+/* Slider
+--------------------------*/
+$--slider-button-hover-color: mix($--color-primary, black, 97%);
+
+/* Carousel
+--------------------------*/
+$--carousel-arrow-background: rgba(31, 45, 61, 0.11);
+$--carousel-arrow-hover-background: rgba(31, 45, 61, 0.23);
+
+:export {
+  primary: $--color-primary;
+  primary_dark: $--color-primary-dark;
+  secondary: $--color-secondary;
+  text_primary: $--color-text-primary;
+  text_secondary: $--color-text-secondary;
+  text_regular: $--color-text-regular;
+  text_placeholder: $--color-text-placeholder;
+}

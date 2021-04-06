@@ -1,0 +1,37 @@
+
+// Fonts
+// @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+// @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+// Variables
+@import "variables";
+
+// Bootstrap
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// @import "node_modules/element-theme-default";
+
+//@import "../../../node_modules/font-awesome/scss/font-awesome";
+//$fa-css-prefix: el-icon-fa;
+
+// font-awesome: Concatenates with '/' between path and font name.
+
+@import "element-ui";
+
+$fa-font-path: '~font-awesome/fonts';
+$fa-css-prefix: el-icon-fa;
+
+@import '~font-awesome/scss/font-awesome';
+
+[class^='#{$fa-css-prefix}-'], [class*=' #{$fa-css-prefix}-'] {
+  font-family: FontAwesome !important; // override ElementUI's icon font
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import "style";
+@import "icons";
