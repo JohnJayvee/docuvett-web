@@ -1,0 +1,38 @@
+.icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &_unknown-user {
+        background-image: url('/images/icons/unknown-user.svg');
+    }
+
+    &_pdf {
+        background-image: url('/images/icons/file-type-pdf.svg');
+    }
+
+    &_jpg {
+        background-image: url('/images/icons/file-type-jpg.svg');
+    }
+
+    &_logo-default {
+        background-image: url('/images/icons/logo-default.png');
+    }
+}
+
+.#{$fa-css-prefix}-facebook-official.colour {
+    color: #475993;
+}
+
+.#{$fa-css-prefix}-linkedin.colour {
+    color: #0084B1;
+}
+
+.#{$fa-css-prefix}-twitter.colour {
+    color: #55ACEE;
+}
+
+.#{$fa-css-prefix}-instagram.colour {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
